@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="jumbo">
+    <h2>
+    <p><h1>Here are your results:<br></h1></p>
+    <form action="" method=post>
+    <dl>
+        {% if error %}<p class=error><strong>Error:</strong> {{ error }}{% endif %}
+        <h2><b>EMAIL YOURSELF THE RESULTS: </b><input type=text name=userEmail><input type=submit id="search" value="Send"><h2>
+    </dl>
+    </form>
+    {% if data['num_tweets'] > 0 %}
+        <p><h2><b>Search Term:</b> {{ data['keyword'] }}</h2></p>
+        <p><h2><b>Number of Tweets:</b> {{ data['num_tweets']}}</h2></p>
+        <p><h2><b>Trending Words(Frequency):</b> {{ data['words']}}</h2></p>
+        <p><h2><b>Trending Hashtags(Frequency):</b> {{ data['hashtags']}}</h2></p>
+        <p><h2><b>Users(Frequency):</b> {{ data['users']}}</b></h2></p>
+        <p><h2><b>Tweets by hour (date-hour):</b> {{ data['dates']}}</h2></p>
+        <br><br>
+        <p><h2><b>Tweet List:</b><h2>
+        {%- for tweet in data['tweets'] recursive %}
+            <p><h3>{{tweet}}</h3></p>
+        {%- endfor %}
+        <h4><b>Remember, you can email yourself the results with all tweets.  (No spam from us)</b><h4>
+    {% else %}
+        <p><h2><b>Keyword:</b> {{ data['keyword'] }}</h2></p>
+        <p><h2>Sorry, there are no results!</h2></p>
+    {% endif %}
+    <h2>Thank you for using TwitterMining.com<br><h2>
+    </div>
+</div>
+
+{% endblock %}

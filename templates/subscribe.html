@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="jumbo">
+    <p><h1>Subscription Service</h1></p>
+    <p><h3><ul>
+        <li>Subscription provides Thursday and Sunday delivery.</li>
+        <li>Analysis and tweets are provided.</li>
+        <li>Up to 10 keywords can be run based on account.</li>
+        <li>Subscription retrieves more tweets then the online lookup.</li>
+        <li>Terms can be changed at any time via your account page.</li>
+    </ul></h3></p>
+    <br>
+    <h2>Sign up with the email you would like the content delivered to.</h2>
+    {% if error %}
+        <h2><p class=error><strong>Error:</strong> {{ error }}</p></h2>
+    {% endif %}
+    <br>
+    <div><h2>
+        <h2><form action="subscribe" method="post">
+        <p><b>email:</b> <input type=text name=email></p>
+        <p><b>password:</b> <input type=password name=password></p>
+        <p><b>verify:</b> <input type=password name=verify></p>
+        <br>
+        <p><input id='search' type=submit value=Subscribe></p>
+        <br>
+        </form></h2>
+    </div>
+</div>
+{% endblock %}

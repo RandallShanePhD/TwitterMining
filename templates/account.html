@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="jumbo">
+    {% if error %}
+        <h2><p class=error><strong>Error:</strong> {{ error }}</p></h2>
+    {% endif %}
+    <form action="account" method="post">
+    <p><h1>Profile:</h1></p>
+    <h2><p><b>Email: </b>{{ email }}</p>
+    <p><b>Plan: </b>{{ plan }}</p>
+    <p><b>password:</b> <input type=password name=password value='****'></p>
+    <p><input id='login' type=submit value='Update'></p></h2>
+    <hr align=center >
+    <p><h1>Search Terms:</h1></p>
+    {% if plan == 'bronze' %}
+        <form action="account" method="post"><h2>
+        <p>Term 1: <input type=text name=terma value={{ terms[0] }}></p>
+        <p><input id='login' type=submit value='Update'></p>
+        </form>
+    {% elif plan == 'silver' %}
+        <form action="account" method="post"><h2>
+        <p>Term 1: <input type=text name=terma value={{ terms[0] }}></p>
+        <p>Term 2: <input type=text name=termb value={{ terms[1] }}></p>
+        <p>Term 3: <input type=text name=termc value={{ terms[2] }}></p>
+        <p>Term 4: <input type=text name=termd value={{ terms[3] }}></p>
+        <p>Term 5: <input type=text name=terme value={{ terms[4] }}></p>
+        <p><input id='login' type=submit value='Update'></p>
+        </form>
+    {% elif plan == 'gold' %}
+        <form action="account" method="post"><h2>
+        <p>Term 1: <input type=text name=terma value={{ terms[0] }}></p>
+        <p>Term 2: <input type=text name=termb value={{ terms[1] }}></p>
+        <p>Term 3: <input type=text name=termc value={{ terms[2] }}></p>
+        <p>Term 4: <input type=text name=termd value={{ terms[3] }}></p>
+        <p>Term 5: <input type=text name=terme value={{ terms[4] }}></p>
+        <p>Term 6: <input type=text name=termf value={{ terms[5] }}></p>
+        <p>Term 7: <input type=text name=termg value={{ terms[6] }}></p>
+        <p>Term 8: <input type=text name=termh value={{ terms[7] }}></p>
+        <p>Term 9: <input type=text name=termi value={{ terms[8] }}></p>
+        <p>Term 10: <input type=text name=termj value={{ terms[9] }}></p>
+        <p><input id='login' type=submit value='Update'></p>
+    {% endif %}
+    </form>
+    <hr align=center >
+    <p><h2>Any questions, comments, concerns, don't fret!<p>
+    <p>Just <a href="mailto:info@twittermining.com">drop us a line</a>
+        and we will take care of it!</p>
+    <p><a href="mailto:info@twittermining.com">Info@TwitterMining.com</a></h2></p>
+    <br>
+    <p><h4><a href="logout">logout</a></h4></p>
+ </div>
+{% endblock %}

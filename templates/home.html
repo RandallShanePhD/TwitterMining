@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+$(function(){
+$("#field").keyup(function(event){
+  if(event.which == 13){
+    document.myform.submit();
+    }
+});
+
+{% block content %}
+<div id="page">
+    <div class="figure">
+        <img alt="TwitterMining.com" title="TwitterMining.com" src="/static/images/logo.png" />
+    </div>
+</div>
+
+<div class="jumbo">
+
+    <h2><p>Try our new subscription account! <a href="subscribe"><b>SUBSCRIBE</b></a></p>
+    <p>Search by keyword, @name or #hashtag and receive tweets and trend analysis!</h2>
+    {% block body %}
+    <form action="{{ url_for('home') }}" method=post>
+    {% if error %}
+        <h2><p class=error><strong>Error:</strong> {{ error }}</h2></p>
+    {% endif %}
+        <p><h2><input type=text name=term size=50></h2></p>
+        <h4><b>Options: </b>
+        <input type="checkbox" name=rtype value="popular"> 15 Most Popular tweets only (very fast)</input></p>
+        <input type="checkbox" name=rtweet value="rtweet"> Exclude retweets</input></p>
+        <p><h2><input type=submit id="search" value="Search"></p>
+        <p><h2>Hit <b>SEARCH</b> and be patient.  It will take about 15 seconds!</h2></p>
+        <br>
+    </form>
+<br>
+</div>
+
+{% endblock %}
+
+{% endblock %}

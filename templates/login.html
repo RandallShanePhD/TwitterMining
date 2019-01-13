@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="jumbo">
+    <p><h1>Login Page</h1></p>
+    <div>
+        <form action="login" method="post"><h2>
+        <p>email: <input type=text name=email></p>
+        <p>password: <input type=password name=password></p>
+        <p><input id='login' type=submit value=Login></p>
+        <br>
+        {% if error %}
+            <p class=error><strong>Error:</strong> {{ error }}
+        {% endif %}
+        </form>
+        <br>
+        <p><h4><a href="subscribe">sign up for account</a></h4></p>
+        <p><h4><a href="recover">recover password</a></h4></p>
+    </div>
+</div>
+{% endblock %}

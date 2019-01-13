@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="jumbo">
+    <p><h1>Select Your Plan</h1></p>
+    <p><h2>Choose your plan, then your terms.  Results will be emailed to you twice a week.  You can change your terms at any time in your accounts page.  Tweet coverage is more complete and spans 3 to 4 days on all subscription accounts.  Cancel anytime!</h2></p>
+    <p><hr></p>
+    <div>
+        <form action="plan" method="post">
+            <h2>
+            <p><input type="radio" name="plan" value="bronze">
+            <b> Bronze Plan:</b> 1 Term, No Cost</p>
+            <p><input type="radio" name="plan" value="silver" checked>
+            <b> Silver Plan:</b> 5 terms, $5 per month</p>
+            <p><input type="radio" name="plan" value="gold">
+            <b> Gold Plan:</b> 10 terms, $10 per month</p>
+            <p><b> API Access:</b> Please
+            <a href="mailto:info@twittermining.com">contact</a> us</p>
+            <p><input id='search' type=submit value=Join></p>
+        </form>
+    </div>
+ </div>
+{% endblock %}

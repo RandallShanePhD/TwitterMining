@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="jumbo">
+    <p><h1>Mechanics Page:<br></h1></p>
+    {%- for element in data recursive %}
+        <p><h5>{{ element }}</h5></p>
+    {%- endfor %}
+    <br>
+    <p><h4><a href="logout">logout</a></h4></p>
+ </div>
+{% endblock %}

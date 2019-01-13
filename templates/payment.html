@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="jumbo">
+    <p><h1>Pay for Your Plan</h1></p>
+    <p><h2>Payment is subscription based through PayPal.  You will see the billing through <a href="http://www.BaseXVI.com">Base XVI, LLC</a>, our parent company.  Cancel anytime - no worries!</h2></p>
+    <div>
+    <p><h2>You selected the {{ plan }} plan.</h2></p>
+    {% if plan == 'silver' %}
+        <p><h2>Silver plan is $5 per month</p>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="X85PS8TFEPRPN">
+        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribeCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </form>
+        </h2>
+
+    {% else %}
+        <p><h2>Gold plan is $10 per month</p>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="5WURYUEJX9Y44">
+        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribeCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </form>
+        </h2>
+
+    {% endif %}
+    <br>
+    {% if error %}
+        <p class=error><strong>Error:</strong> {{ error }}
+    {% endif %}
+    </div>
+ </div>
+{% endblock %}
