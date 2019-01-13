@@ -28,7 +28,7 @@ def emailResults(userEmail, body):
     smtpserver.ehlo()
     smtpserver.starttls()
     smtpserver.ehlo
-    smtpserver.login(msg['From'], 'NpYJ=7S+2[6V(nhq6b')
+    smtpserver.login(msg['From'], '')
 
     try:
         smtpserver.sendmail(msg['From'], userEmail, msg.as_string())
@@ -52,7 +52,7 @@ def sendPW(userEmail, code):
     smtpserver.ehlo()
     smtpserver.starttls()
     smtpserver.ehlo
-    smtpserver.login(msg['From'], 'NpYJ=7S+2[6V(nhq6b')
+    smtpserver.login(msg['From'], '')
 
     try:
         smtpserver.sendmail(msg['From'], userEmail, msg.as_string())

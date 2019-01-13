@@ -18,34 +18,34 @@ def permission(mr):
     access_token_secret = ""
     if mr == 0:
         # Locator Rig
-        consumer_key = "gJileblrpfV8s1nqcjf4v8ZQw"
-        consumer_secret = "3QuqGc8PxVBRoAUBZCPxGuyLFkNZZyEiNkMOkxEbXsU9KwdBd2"
-        access_token = "1561881230-ti5xtGmY3gVqXkNXoPk6FH1VXi2URpJEx9rFUvL"
-        access_token_secret = "fkK94WGBLJwuN4yEWkbzUaI0j1LNzrRpQ0Q2ktgDwmrXu"
+        consumer_key = ""
+        consumer_secret = ""
+        access_token = ""
+        access_token_secret = ""
     elif mr == 1:
         # Mining Rig 01
-        consumer_key = "ouXMt740fBBvEiltPjw4A"
-        consumer_secret = "fFrEHF6b6ibZBjuNfI1Waql4tDcLQKZO5ZknQMgjhf4"
-        access_token = "1561881230-9ucwTOfH5LpwF5kc8CdfhkLwMuTI3VtsI8d2STU"
-        access_token_secret = "zMgOnh1GqC0XSxWgbpQIrP3w24KdHycByxc0b31Fk"
+        consumer_key = ""
+        consumer_secret = ""
+        access_token = ""
+        access_token_secret = ""
     elif mr == 2:
         # Mining Rig 02
-        consumer_key = "pWpV47yonc8eE5I8isjceQ"
-        consumer_secret = "5lLRW81fXKqbkp43nkJMt9uRkxNEhycGNL4yVV8Q"
-        access_token = "1561881230-N9qI9F61gzaeEv5V107m2R3Xfm5dH6HsitHiyfg"
-        access_token_secret = "6U677xhMX5VXXk5ukKbHyp7pIEiVa8sK1AjfVFEWQ"
+        consumer_key = ""
+        consumer_secret = ""
+        access_token = ""
+        access_token_secret = ""
     elif mr == 3:
         # Mining Rig 03
-        consumer_key = "2wsgS8jkz8r8VKraMdJP3Q"
-        consumer_secret = "nJIK8WHxcbwDwprVRxgvEZPYtcnB54oH7EO3mARUY"
-        access_token = "1561881230-ct501hj8yGiPLxlyBhAxPUcdEpr3qzg7DnWDsoW"
-        access_token_secret = "I0O40B2x7v3gTaTG3qsaP3f8zQHrxH8mb7Zo5cuAJSLDb"
+        consumer_key = ""
+        consumer_secret = ""
+        access_token = ""
+        access_token_secret = ""
     elif mr == 4:
         # Mining Rig 04
-        consumer_key = "oTUWHg9UxG3nUSCwDkNyqA"
-        consumer_secret = "r3MeDb8e9jsRNrubbyQO2HbCX5xmzYGGflYRT9WcvAk"
-        access_token = "1561881230-lRalilABfVJonqJBL44AWyuGIGlK459BM4XNOUK"
-        access_token_secret = "io7MnSLALl0iovPkrXyIikVlcEc86n6lcaALDnEIqBmFk"
+        consumer_key = ""
+        consumer_secret = ""
+        access_token = ""
+        access_token_secret = ""
 
     perm = Twython(
         consumer_key, consumer_secret, access_token, access_token_secret)
